@@ -1,4 +1,4 @@
-package Productos;
+package Logica.Productos;
 
 public class Snickers extends Dulce {
 

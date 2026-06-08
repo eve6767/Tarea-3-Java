@@ -1,4 +1,4 @@
-package Productos;
+package Logica.Productos;
 
 // Se define la clase abstracta "Producto" de la que se basara toda la mercancia disponible
 

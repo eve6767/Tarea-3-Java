@@ -1,3 +1,5 @@
+package Logica;
+
 public enum Catalogo {
 
     COCACOLA(1, 100),

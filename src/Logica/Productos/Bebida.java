@@ -1,4 +1,4 @@
-package Productos;
+package Logica.Productos;
 
 /** Clase abstracta en la que se basaran las bebidas
  */

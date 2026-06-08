@@ -1,11 +1,15 @@
-import Excepciones.NoHayProductoException;
-import Excepciones.PagoIncorrectoException;
-import Excepciones.PagoInsuficienteException;
-import Monedas.*;
-import Productos.*;
+package Logica;
+
+import java.util.*;
+import Logica.Excepciones.*;
+import Logica.Productos.*;
+import Logica.Monedas.*;
+import Logica.Deposito.*;
 
 
 public class Expendedor {
+
+    private int stock;
 
     private Deposito<Producto> depCoca;
     private Deposito<Producto> depFnt;
@@ -79,13 +83,40 @@ public class Expendedor {
         }
 
         return p;
-
-
     }
 
-    // FALTA EL VUELTO
+
     public Moneda getVuelto() {
         return monedaVuelto.getElemento();
+    }
+
+
+    // USAR SWITCH CASE PARA QUE NO QUEDE TAN ESTUPIDO
+
+
+    public int getStockCoca() {
+        stock = depCoca.size();
+        return stock;
+    }
+
+    public int getStockSprite() {
+        stock = depSprt.size();
+        return stock;
+    }
+
+    public int getStockFanta() {
+        stock = depFnt.size();
+        return stock;
+    }
+
+    public int getStockSuper8() {
+        stock = depSup8.size();
+        return stock;
+    }
+
+    public int getStockSnickers() {
+        stock = depSnick.size();
+        return stock;
     }
 
 

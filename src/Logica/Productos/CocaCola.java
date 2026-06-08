@@ -1,11 +1,12 @@
-package Productos;
+package Logica.Productos;
 
-public class Super8 extends Dulce {
+public class CocaCola extends Bebida {
+
 
     /** Para asignar numeros de serie a los productos
      */
 
-    public Super8(int numSerie) {
+    public CocaCola(int numSerie) {
         super(numSerie);
     }
 
@@ -13,7 +14,9 @@ public class Super8 extends Dulce {
      */
 
     @Override
-    public String sabor(){
-        return "Super8";
+    public String sabor() {
+        return "CocaCola";
     }
+
+
 }

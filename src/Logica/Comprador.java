@@ -1,8 +1,8 @@
-import Excepciones.NoHayProductoException;
-import Excepciones.PagoIncorrectoException;
-import Excepciones.PagoInsuficienteException;
-import Monedas.*;
-import Productos.*;
+package Logica;
+
+import Logica.Excepciones.*;
+import Logica.Productos.Producto;
+import Logica.Monedas.*;
 
 public class Comprador {
 

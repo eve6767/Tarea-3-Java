@@ -1,4 +1,4 @@
-package Productos;
+package Logica.Productos;
 
 public class Fanta extends Bebida {
 

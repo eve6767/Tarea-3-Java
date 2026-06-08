@@ -1,7 +1,7 @@
-package Monedas;
+package Logica.Monedas;
 
-public class Moneda1000 extends Moneda {
-    public Moneda1000() {
+public class Moneda500 extends Moneda {
+    public Moneda500() {
         super();
     }
 
@@ -10,6 +10,6 @@ public class Moneda1000 extends Moneda {
 
     @Override
     public int getValor() {
-        return 1000;
+        return 500;
     }
 }
