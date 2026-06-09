@@ -9,6 +9,7 @@ public class PanelMonedas extends JPanel {
 
     private JLabel dineroLabel;
     private int saldo = 0;
+    private Separador separador = new Separador();
 
 
     public PanelMonedas(ArrayList<Moneda> monedas) {
@@ -52,7 +53,7 @@ public class PanelMonedas extends JPanel {
 
 
         botonesPanel.add(dineroLabel);
-
+        botonesPanel.add(separador.getLabel());
         botonesPanel.add(boton1);
         botonesPanel.add(boton2);
         botonesPanel.add(boton3);
