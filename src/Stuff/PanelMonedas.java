@@ -3,16 +3,27 @@ package Stuff;
 import Logica.Monedas.*;
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.List;
 
 public class PanelMonedas extends JPanel {
 
     private JLabel dineroLabel;
     private int saldo = 0;
     private Separador separador = new Separador();
+    private JList monedasList;
+
+    Color BRONZE = new Color(205, 127, 50);
+    Color SILVER = new Color(192, 192, 192);
+    Color GOLD = new Color(255, 215, 0);
 
 
-    public PanelMonedas(ArrayList<Moneda> monedas) {
+    /**
+     * Crea un panel que representa un monedero, simula ingresar monedas de distintos valores a la mquina.
+     * @param monedas recibe cada  moneda e identifica su respectivo valor.
+     */
+
+
+    public PanelMonedas(List<Moneda> monedas) {
 
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createTitledBorder("Monedero"));
@@ -23,7 +34,7 @@ public class PanelMonedas extends JPanel {
             monedasModel.addElement("Moneda: &" + m.getValor());
         }
 
-        JList monedasList = new JList<>(monedasModel);
+        monedasList = new JList<>(monedasModel);
 
         add(new JScrollPane(monedasList), BorderLayout.WEST);
 
@@ -34,19 +45,19 @@ public class PanelMonedas extends JPanel {
 
 
         JButton boton1 = new JButton("100");
-        boton1.setBackground(Color.RED);
+        boton1.setBackground(BRONZE);
         boton1.setOpaque(true);
         boton1.setBorderPainted(false);
         boton1.setForeground(Color.BLACK);
 
         JButton boton2 = new JButton("500");
-        boton2.setBackground(Color.YELLOW);
+        boton2.setBackground(SILVER);
         boton2.setOpaque(true);
         boton2.setBorderPainted(false);
         boton2.setForeground(Color.BLACK);
 
         JButton boton3 = new JButton("1000");
-        boton3.setBackground(Color.GREEN);
+        boton3.setBackground(GOLD);
         boton3.setOpaque(true);
         boton3.setBorderPainted(false);
         boton3.setForeground(Color.BLACK);
@@ -84,7 +95,6 @@ public class PanelMonedas extends JPanel {
         }
     }
 
-
     public void agregarSaldo(int x) {
         saldo += x;
     }
@@ -92,6 +102,13 @@ public class PanelMonedas extends JPanel {
     public void quitarSaldo(int x) {
         saldo -= x;
     }
+
+
+    /**
+     * Crea una moneda virtual, intenta crear una moneda del valor mayor posible por conveiencia.
+     * @return Si no es nula, la moneda generada.
+     */
+
 
     public Moneda monedaVirtual() {
 

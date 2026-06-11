@@ -90,10 +90,6 @@ public class Expendedor {
         return monedaVuelto.getElemento();
     }
 
-
-    // USAR SWITCH CASE PARA QUE NO QUEDE TAN ESTUPIDO
-
-
     public int getStockCoca() {
         stock = depCoca.size();
         return stock;
@@ -118,7 +114,6 @@ public class Expendedor {
         stock = depSnick.size();
         return stock;
     }
-
 
 }
 

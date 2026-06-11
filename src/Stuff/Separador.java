@@ -6,6 +6,12 @@ public class Separador {
 
     private JLabel separador;
 
+
+    /**
+     * Separador simple creado por conveniencia.
+     */
+
+
     public Separador() {
         separador = new JLabel("------------------------------------------");
     }
